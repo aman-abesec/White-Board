@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="textEditor text-widget-edit-container" id="editTextEditor">
+            <textarea id="editTextInput"></textarea>
+            <div class="group-btn">
+                <button id="editSaveButton">✅︎</button>
+            </div>
+        </div>
+        <div class="textEditor text-widget-save-container" id="addTextEditor">
+            <textarea id="addTextInput"></textarea>
+            <div class="group-btn">
+                <button id="addSaveButton">✅︎</button>
+                <button id="editCutButton">❎</button>
+            </div>
+        </div>
+        <canvas id="editor-area"></canvas>
+        <!-- <canvas id="editor-area-for-text"></canvas> -->
+        <nav class="nav">
+            <div class="group-input">
+                <button class="line shape active-animation" shape="line">🖌️</button>
+                <button class="normalLine shape" shape="normalLine">|</button>
+                <button class="arrow shape fa" shape="arrow">&#xf062;</button>
+                <button class="rectangle shape fa" shape="rectangle">&#xf096;</button>
+                <button class="circle shape" shape="circle">O
+                </button>
+                <button class="triangle shape" shape="triangle">△</button>
+                <button class="textWidget shape" shape="textWidget">T</button>
+            </div>
+            <div class="group-color-btn">
+                <button class="btn-round draw-color" style="background-color: red;"></button>
+                <button class="btn-round draw-color" style="background-color: yellow;"></button>
+                <button class="btn-round draw-color" style="background-color: blue;"button>
+                <button class="btn-round draw-color" style="background-color: green;"></button>
+                <button class="btn-round draw-color" style="background-color: #aa1dc6;"></button>
+                <button class="btn-round draw-color" style="background-color: rgb(238, 132, 18);"></button>
+                <button class="btn-round active-animation" style="padding: 0; overflow: hidden; width:45px;height: 45px;"> 
+                    <input id="custom-font-color" type="color">
+                </button>
+                <input id="custom-font-size" type="range" min="3" max="100" value="3">
+            </div>
+            <div class="group-btn">
+                <button id="erase-canvas-btn" class="btn">
+                    <i class="fa fa-eraser"></i> Erase
+                </button>
+                <button id="clear-canvas-btn" class="btn">
+                    <i class="fa fa-trash"></i> Clear
+                </button>
+                <button id="undo-canvas-btn" class="btn">
+                    <i class="fa fa-undo"></i> Undo
+                </button>
+                <button id="save-canvas-btn" class="btn">
+                    <i class="fa fa-save"></i> Save
+                </button>
+            </div>
+        </nav>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

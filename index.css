@@ -1,0 +1,113 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+canvas {
+    width: 100%;
+    height: 100%;
+    background-image: repeating-linear-gradient(to bottom, transparent, transparent 15px, #f0f0f0 15px, #f0f0f0 16px);
+    background-size: 100% 20px;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+}
+
+.container,.nav,.group-color-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textEditor {
+    position: absolute;
+    display: none;
+    z-index: 9999;
+}
+.group-btn{
+    display: flex;
+    margin: 5px 0; 
+    gap:15px;
+}
+.text-widget-edit-container,
+.text-widget-save-container{
+    flex-direction: column;
+}
+
+.text-widget-edit-container textarea,
+.text-widget-save-container textarea{
+    background-color: transparent;
+    padding: 5px;
+    border: 2px dotted;
+    outline: none;
+}
+
+.text-widget-edit-container button,
+.text-widget-save-container button{
+    width: 5px;
+    border: none;
+}
+
+.nav{
+    justify-content: space-around;
+    width: 90vw;
+    position: absolute;
+    top: 5px;
+    background-color: #CADEFC;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+.btn{
+    border: 0px;
+    padding: 8px;
+    background-color: #CCA8E9;
+    border-radius: 5px;
+    border: 2px solid #fff;
+}
+
+.group-color-btn{
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.btn-round{
+    padding: 20px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    position: relative;
+}
+
+#custom-font-color{
+    width:50px;
+    height: 55px;
+    position: absolute;
+    top:-6px;
+    right: -4px;
+}
+
+.shape{
+   font-size: 25px; 
+   width: 40px;
+   height: 40px;
+   background-color: #CCA8E9;
+   border-radius: 5px;
+   border: 3px solid #fff;
+}
+
+@keyframes rainbow {
+    0% { border-color: red; }
+    16.66% { border-color: orange; }
+    33.33% { border-color: yellow; }
+    50% { border-color: green; }
+    66.66% { border-color: blue; }
+    83.33% { border-color: rgb(143, 15, 234); }
+    100% { border-color: violet; }
+}
+
+.active-animation{
+    animation: rainbow 2s infinite;
+}
